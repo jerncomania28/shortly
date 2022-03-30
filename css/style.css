@@ -36,6 +36,11 @@ header .logo button {
   border: none;
 }
 
+header .logo .fa-arrow-left {
+  color: white;
+  margin-right: 10px;
+}
+
 header .logo-menu {
   display: none;
 }
@@ -298,12 +303,6 @@ header .buttons-desktop {
   font-size: 12px;
 }
 
-main {
-  background: url("../Img/bg-boost-desktop.svg");
-  background-size: cover;
-  background-repeat: repeat;
-}
-
 .form-container {
   width: 70vw;
   max-width: 500px;
@@ -335,7 +334,7 @@ main {
 .form-container .form-header {
   margin: 1.5rem 0rem;
   font-size: 28px;
-  color: white;
+  color: black;
 }
 
 .form-container form {

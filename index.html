@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shortly - Website</title>
     <link rel="stylesheet" href="./css/style.css">
-
+    <script src="https://kit.fontawesome.com/bf62da8195.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -88,14 +88,16 @@
                     <img src="./Img/icon-fully-customizable.svg" alt="brand-recognition">
                     <h1>Governance</h1>
                     <p>
-                        This MIS Software defines, manager and enforces rules on how (and whether) employees can access the company’s technologies and network infrastructure
+                        This MIS Software defines, manager and enforces rules on how (and whether) employees can access
+                        the company’s technologies and network infrastructure
                     </p>
                 </li>
                 <li class="detail-records">
                     <img src="./Img/icon-fully-customizable.svg" alt="detailed-record">
                     <h1>Infrastructure</h1>
                     <p>
-                        The MIS Software provides internal help desk and support services, assisting employees and troubleshooting issues related to the infrastructure.
+                        The MIS Software provides internal help desk and support services, assisting employees and
+                        troubleshooting issues related to the infrastructure.
                     </p>
 
                 </li>
@@ -103,7 +105,8 @@
                     <img src="./Img/icon-fully-customizable.svg" alt="fully-customizable">
                     <h1>Data Management</h1>
                     <p>
-                        The MIS Software is responsible for ensuring the availability and security of the data management systems.
+                        The MIS Software is responsible for ensuring the availability and security of the data
+                        management systems.
                     </p>
                 </li>
             </ul>
@@ -163,39 +166,8 @@
     </footer>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/brands.min.js"
-        integrity="sha512-KGeeDLRAGeJZYsq3J/4s/X6eZyaxTAlScSN2b7z/H/r2MBZ3pAg4T52SzavEJa2Uthmll5HMhvRaLeuxT76EVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-
-        const menuBtn = document.querySelector('.menu-Btn');
-        const hamburger = document.querySelector('.menu-Btn_burger');
-        const nav = document.querySelector('nav');
-        const menu = document.querySelector('.menu');
-
-
-        menuBtn.addEventListener('click', handleMenuBtn);
-
-
-        let showMenu = false;
-
-        function handleMenuBtn() {
-            if (!showMenu) {
-                hamburger.classList.add('open');
-                menu.classList.add('open');
-
-                showMenu = true;
-            } else {
-                hamburger.classList.remove('open');
-                menu.classList.remove('open');
-
-                showMenu = false;
-            }
-
-            // console.log(hamburger.classList);
-        }
-    </script>
+    <script src="./JS/menuBtn.js"></script>
 </body>
 
 </html>

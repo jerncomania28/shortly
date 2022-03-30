@@ -17,7 +17,7 @@
 
 
             <div class="logo">
-                <a href="./index.html"><button> Back</button></a>
+                <a href="./index.html"><button> <i class="fas fa-arrow-left"></i>Home</button></a>
 
                 <ul class="logo-menu">
 
@@ -127,67 +127,10 @@
         </div>
     </footer>
 
+   <script src="./JS/menuBtn.js"></script>
+   <script src="./JS/login.js"></script>
+   <script src="https://kit.fontawesome.com/bf62da8195.js" crossorigin="anonymous"></script>
 
-
-    <script>
-
-        const menuBtn = document.querySelector('.menu-Btn');
-        const hamburger = document.querySelector('.menu-Btn_burger');
-        const nav = document.querySelector('nav');
-        const menu = document.querySelector('.menu');
-
-
-        menuBtn.addEventListener('click', handleMenuBtn);
-
-
-        let showMenu = false;
-
-        function handleMenuBtn() {
-            if (!showMenu) {
-                hamburger.classList.add('open');
-                menu.classList.add('open');
-
-                showMenu = true;
-            } else {
-                hamburger.classList.remove('open');
-                menu.classList.remove('open');
-
-                showMenu = false;
-            }
-
-            // console.log(hamburger.classList);
-        }
-    </script>
-    <script>
-
-        const email = document.querySelector('#email');
-        const password = document.querySelector('#password');
-        const signIn = document.querySelector('#signIn');
-        const formContainer = document.querySelector('.form-container');
-
-
-        signIn.addEventListener('click', checkInput);
-
-
-        const paragraph = document.createElement('p');
-
-        function checkInput(event) {
-
-            if (email.value === "" || password.value === "") {
-
-                paragraph.innerText = "make sure the fields are not empty";
-
-                paragraph.classList.add('error'); formContainer.appendChild(paragraph);
-
-                event.preventDefault();
-
-            }
-        }
-        formContainer.removeChild(paragraph);
-
-
-
-    </script>
 
 </body>
 
