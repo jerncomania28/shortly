@@ -26,6 +26,16 @@ header .logo {
   grid-column: 2/3;
 }
 
+header .logo button {
+  width: 100px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  background: #3b3054;
+  outline: none;
+  border: none;
+}
+
 header .logo-menu {
   display: none;
 }
@@ -52,11 +62,12 @@ header .menu-Btn {
 header .menu-Btn_burger {
   width: 28px;
   height: 4px;
-  background: black;
+  background: #3b3054;
   border-radius: 5px;
   position: absolute;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  z-index: 10;
 }
 
 header .menu-Btn_burger.open {
@@ -79,7 +90,7 @@ header .menu-Btn_burger::before {
   content: "";
   width: 28px;
   height: 4px;
-  background: black;
+  background: #3b3054;
   border-radius: 5px;
   position: absolute;
   top: -8px;
@@ -89,7 +100,7 @@ header .menu-Btn_burger::after {
   content: "";
   width: 28px;
   height: 4px;
-  background: black;
+  background: #3b3054;
   border-radius: 5px;
   position: absolute;
   top: 8px;
@@ -97,7 +108,7 @@ header .menu-Btn_burger::after {
 
 header .menu {
   width: 70vw;
-  height: 50vh;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,14 +126,14 @@ header .menu {
   border-radius: 10px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -80%);
-          transform: translate(-50%, -80%);
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
   background: #3b3054;
   visibility: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   list-style-type: none;
-  z-index: 5;
+  z-index: 3;
 }
 
 header .menu li {
@@ -148,7 +159,7 @@ header .menu li {
 header .menu li a {
   text-decoration: none;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 }
 
@@ -167,7 +178,11 @@ header .menu li .buttons-desktop {
       flex-wrap: wrap;
 }
 
-header .menu li .buttons-login {
+header .menu li a {
+  color: white;
+}
+
+header .menu li a .buttons-login {
   border: none;
   padding: 1rem;
   outline: none;
@@ -177,12 +192,6 @@ header .menu li .buttons-login {
   background: #2acfcf;
   margin: 0.5rem;
   width: 100%;
-}
-
-header .menu li .buttons-login a {
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
 }
 
 header .menu li .buttons-signUp {
@@ -195,12 +204,6 @@ header .menu li .buttons-signUp {
   background: #2acfcf;
   margin: 0.5rem;
   width: 100%;
-}
-
-header .menu li .buttons-signUp a {
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
 }
 
 header .menu.open {
@@ -255,7 +258,8 @@ header .buttons-desktop {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
+  min-width: 400px;
+  width: 50vw;
   margin: 0.5rem;
 }
 
@@ -263,12 +267,15 @@ header .buttons-desktop {
   font-size: 20px;
   font-weight: 800;
   margin: 10px;
+  text-align: center;
+  color: #3b3054;
 }
 
 .intro-page .intro-page_body p {
   font-size: 18px;
   margin: 10px;
   text-align: center;
+  font-size: 12px;
 }
 
 .intro-page .intro-page_body button {
@@ -286,9 +293,15 @@ header .buttons-desktop {
 }
 
 .intro-page .intro-page_body button a {
-  color: white;
-  font-size: 16px;
   text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+main {
+  background: url("../Img/bg-boost-desktop.svg");
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 .form-container {
@@ -312,9 +325,17 @@ header .buttons-desktop {
   margin: 7rem auto;
 }
 
+.form-container .error {
+  color: red;
+  margin: 15px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
 .form-container .form-header {
   margin: 1.5rem 0rem;
   font-size: 28px;
+  color: white;
 }
 
 .form-container form {
@@ -388,17 +409,53 @@ header .buttons-desktop {
 
 .form-container .checkbox > span {
   font-size: 12px;
-  font-family: lighter;
+  font-weight: 800;
 }
 
-.form-container button {
+.form-container #signIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1.5rem 0rem 2rem 0rem;
-  padding: 0.9rem;
+  padding: 0.6rem;
+  width: 150px;
   border-radius: 30px;
   outline: none;
   border: none;
-  color: white;
   background: #2acfcf;
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.form-container #signUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 0rem 2rem 0rem;
+  padding: 0.6rem;
+  width: 150px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  background: #2acfcf;
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 12px;
 }
 
 .shorten-container {
@@ -465,7 +522,7 @@ header .buttons-desktop {
 }
 
 .advanced-statistics {
-  padding-top: 7rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,18 +659,18 @@ header .buttons-desktop {
 }
 
 .boost-today button a {
-  color: white;
-  font-size: 16px;
   text-decoration: none;
+  color: white;
+  font-size: 12px;
 }
 
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -624,6 +681,7 @@ footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background: #232127;
+  width: 100vw;
 }
 
 footer .logo-container {
@@ -658,10 +716,10 @@ footer .footer-section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
+  width: 100vw;
 }
 
 footer .footer-section .features {
-  margin: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -675,6 +733,8 @@ footer .footer-section .features {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100px;
+  margin: 1rem 4rem;
   color: white;
 }
 
@@ -698,15 +758,16 @@ footer .footer-section .features .inner {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 footer .footer-section .features .inner li {
   margin: 10px;
+  width: 100px;
   color: #bfbfbf;
 }
 
 footer .footer-section .resources {
-  margin: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -720,6 +781,8 @@ footer .footer-section .resources {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100px;
+  margin: 1rem 4rem;
   color: white;
 }
 
@@ -743,15 +806,16 @@ footer .footer-section .resources .inner {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 footer .footer-section .resources .inner li {
   margin: 10px;
+  width: 100px;
   color: #bfbfbf;
 }
 
 footer .footer-section .company {
-  margin: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -765,6 +829,8 @@ footer .footer-section .company {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100px;
+  margin: 1rem 4rem;
   color: white;
 }
 
@@ -788,10 +854,12 @@ footer .footer-section .company .inner {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 footer .footer-section .company .inner li {
   margin: 10px;
+  width: 100px;
   color: #bfbfbf;
 }
 

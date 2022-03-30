@@ -1,27 +1,41 @@
 
+main{
+     background: url('../Img/bg-boost-desktop.svg');
+     background-size: cover;
+     background-repeat: repeat;
 
-.form-container{
+}
+
+
+.form-container {
     width: 70vw;
     max-width: 500px;
-    box-shadow: rgba(50,50,93,0.25) 0px 6px 12px -2px ,rgba(0,0,0,0.3) 0px 3px 7px -3px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 7rem auto;
 
+    .error {
+        color: red;
+        margin: 15px;
+        font-size: 12px;
+        font-family: monospace;
+    }
 
     // position: relative;
     // top: 0;
     // left: 0;
     // transform: translate(-50%,-50%);
 
-    .form-header{
+    .form-header {
         margin: 1.5rem 0rem;
         font-size: 28px;
+        color: white;
     }
 
-    form{
+    form {
         position: relative;
         width: 100%;
         display: flex;
@@ -29,14 +43,14 @@
         align-items: center;
         flex-direction: column;
 
-        .input-design{
+        .input-design {
             width: 70%;
             padding: 0.5rem;
             margin: 0.5rem 0.3rem;
         }
     }
 
-    .password-section{
+    .password-section {
         width: 70%;
         position: relative;
         box-sizing: border-box;
@@ -47,13 +61,13 @@
         flex-direction: column;
     }
 
-    .password-section > .pass{
+    .password-section > .pass {
         width: 100%;
         margin: 0.5rem 0.3rem;
         padding: 0.5rem;
     }
 
-    .checkbox{
+    .checkbox {
         width: 78%;
         text-align: left;
         margin: 0.7rem 0rem;
@@ -63,24 +77,47 @@
         align-items: center;
     }
 
-    .checkbox input[type="checkbox"]{
+    .checkbox input[type="checkbox"] {
         width: 20px;
     }
 
     .checkbox > span {
         font-size: 12px;
-        font-family: lighter;
+        font-weight: 800;
     }
 
-    button{
+    #signIn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 1.5rem 0rem 2rem 0rem;
-        padding: 0.9rem;
+        padding: 0.6rem;
+        width: 150px;
         border-radius: 30px;
         outline: none;
         border: none;
-        color: white;
         background: $cyan;
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    #signUp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem 0rem 2rem 0rem;
+        padding: 0.6rem;
+        width: 150px;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        background: $cyan;
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+        font-size: 12px;
+
     }
 }
-
-

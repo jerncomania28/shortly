@@ -1,5 +1,3 @@
-
-
 header {
     nav {
         display: grid;
@@ -10,6 +8,17 @@ header {
 
     .logo {
         grid-column: 2/3;
+
+        button{
+            width: 100px;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: white;
+            background: $dark-violent;
+            outline: none;
+            border: none;
+
+        }
 
         &-menu {
             display: none;
@@ -34,6 +43,7 @@ header {
             border-radius: $menu-burger_radius;
             position: absolute;
             transition: all 0.5s ease-in-out;
+            z-index: 10;
             // border: 5px solid black;
 
             &.open {
@@ -72,7 +82,7 @@ header {
 
     .menu {
         width: 70vw;
-        height: 50vh;
+        height: 60vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,26 +91,26 @@ header {
         border-radius: 10px;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -80%);
+        transform: translate(-50%, -60%);
         background: $dark-violent;
         visibility: hidden;
         transition: all 0.5s ease-in-out;
         list-style-type: none;
-        z-index: 5;
+        z-index: 3;
         li {
             margin: 1rem;
             font-size: $font-size;
             position: relative;
             width: 100%;
-            display:flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
 
-            a{
+            a {
                 text-decoration: none;
                 font-weight: 900;
-                font-size: 20px;
+                font-size: 16px;
                 color: white;
             }
 
@@ -112,10 +122,14 @@ header {
                 flex-wrap: wrap;
             }
 
-            .buttons-login {
-                @include button();
-                width: 100%;
+            a {
+                color: white;
+                .buttons-login {
+                    @include button();
+                    width: 100%;
+                }
             }
+
             .buttons-signUp {
                 @include button();
                 width: 100%;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,17 @@
     <title>Shortly - Website | Log in</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+
     <header>
 
         <nav>
 
 
             <div class="logo">
-               <a href="./index.html"> <img src="./Img/logo.svg" alt="logo"></a>
-
+                <a href="./index.html"><button> Back</button></a>
+                
                 <ul class="logo-menu">
 
                     <li>Features</li>
@@ -43,8 +45,8 @@
             <li><a href="#">Resources</a></li>
             <li>
                 <div class="buttons">
-                    <button class="buttons-login"><a href="./login.html">Login</a></button>
-                    <button class="buttons-signUp"><a href="./signUp.html">SignUp</a></button>
+                    <a href="./login.html"><button class="buttons-login">Login</button></a>
+                    <a href="./signUp.html"><button class="buttons-signUp">SignUp</button></a>
                 </div>
             </li>
 
@@ -72,21 +74,21 @@
                 <div class="checkbox">
                     <input type="checkbox"> <span>I accept terms & conditions</span>
                 </div>
-                <button>
-                    Create Account
-                </button>
+                <a href="#" id="signUp">
+                   
+                        Create Account
+                   
+                </a>
             </form>
         </div>
     </main>
 
-    
+
     <footer>
-         
+
         <div class="logo-container">
-            <img src="./Img/logo.svg" alt="Shortly"
-            class="logo"
-            >
-        </div> 
+            <img src="./Img/logo.svg" alt="Shortly" class="logo">
+        </div>
 
         <ul class="footer-section">
             <li class="features">
@@ -98,7 +100,7 @@
                 </ul>
             </li>
             <li class="resources">
-               <p>Resources</p>
+                <p>Resources</p>
                 <ul class="inner">
                     <li>Blog</li>
                     <li>Developers</li>
@@ -128,7 +130,7 @@
     </footer>
 
 
-    
+
     <script>
 
         const menuBtn = document.querySelector('.menu-Btn');
@@ -158,6 +160,7 @@
             // console.log(hamburger.classList);
         }
     </script>
-    
+
 </body>
+
 </html>
