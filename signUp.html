@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortly - Website | Log in</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <header>
+
+        <nav>
+
+
+            <div class="logo">
+               <a href="./index.html"> <img src="./Img/logo.svg" alt="logo"></a>
+
+                <ul class="logo-menu">
+
+                    <li>Features</li>
+                    <li>Pricing</li>
+                    <li>Resources</li>
+
+                </ul>
+            </div>
+
+            <div class="menu-Btn">
+                <span class="menu-Btn_burger">
+                </span>
+            </div>
+
+            <div class="buttons-desktop">
+                <button class="buttons-desktop-login"><a href="./login.html"></a></button>
+                <button class="buttons-desktop-signUp"><a href="./signUp.html"></a></button>
+            </div>
+        </nav>
+        <ul class="menu">
+
+            <li><a href="#">Features</a> </li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Resources</a></li>
+            <li>
+                <div class="buttons">
+                    <button class="buttons-login"><a href="./login.html">Login</a></button>
+                    <button class="buttons-signUp"><a href="./signUp.html">SignUp</a></button>
+                </div>
+            </li>
+
+        </ul>
+    </header>
+
+    <main>
+
+
+        <div class="form-container">
+
+            <div class="form-header">
+                Registration Form
+            </div>
+
+            <form action="#">
+                <input type="text" placeholder="Name" name="Name" class="input-design">
+                <input type="email" placeholder="Email" name="Email Address" class="input-design">
+                <input type="text" placeholder="Country" name="Country" class="input-design">
+                <input type="Number" placeholder="Phone" name="Phone" class="input-design">
+                <div class="password-section">
+                    <input type="password" placeholder="Password" name="Password" class="pass">
+
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"> <span>I accept terms & conditions</span>
+                </div>
+                <button>
+                    Create Account
+                </button>
+            </form>
+        </div>
+    </main>
+
+    
+    <footer>
+         
+        <div class="logo-container">
+            <img src="./Img/logo.svg" alt="Shortly"
+            class="logo"
+            >
+        </div> 
+
+        <ul class="footer-section">
+            <li class="features">
+                <p>Features</p>
+                <ul class="inner">
+                    <li>Link Shortening</li>
+                    <li>Branded Links</li>
+                    <li>Analytics</li>
+                </ul>
+            </li>
+            <li class="resources">
+               <p>Resources</p>
+                <ul class="inner">
+                    <li>Blog</li>
+                    <li>Developers</li>
+                    <li>Support</li>
+                </ul>
+            </li>
+            <li class="company">
+                <p>Company</p>
+                <ul class="inner">
+                    <li>About</li>
+                    <li>Our Team</li>
+                    <li>Careers</li>
+                    <li>Contact</li>
+                </ul>
+            </li>
+
+        </ul>
+        <div class="social-links">
+
+            <a href="#"><img src="./Img/icon-facebook.svg" alt="facebook"></a>
+            <a href="#"><img src="./Img/icon-instagram.svg" alt="instagram"></a>
+            <a href="#"><img src="./Img/icon-pinterest.svg" alt="pinterest"></a>
+            <a href="#"><img src="./Img/icon-twitter.svg" alt="twitter"></a>
+
+
+        </div>
+    </footer>
+
+
+    
+    <script>
+
+        const menuBtn = document.querySelector('.menu-Btn');
+        const hamburger = document.querySelector('.menu-Btn_burger');
+        const nav = document.querySelector('nav');
+        const menu = document.querySelector('.menu');
+
+
+        menuBtn.addEventListener('click', handleMenuBtn);
+
+
+        let showMenu = false;
+
+        function handleMenuBtn() {
+            if (!showMenu) {
+                hamburger.classList.add('open');
+                menu.classList.add('open');
+
+                showMenu = true;
+            } else {
+                hamburger.classList.remove('open');
+                menu.classList.remove('open');
+
+                showMenu = false;
+            }
+
+            // console.log(hamburger.classList);
+        }
+    </script>
+    
+</body>
+</html>

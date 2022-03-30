@@ -1,0 +1,46 @@
+.intro-page{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+
+    .intro-img_container{
+        width: 400px;
+        position: relative;
+        z-index: 1;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .intro-page_body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 400px;
+        margin: 0.5rem;
+        h1{
+           font-size: 20px; 
+           font-weight: 800;
+           margin: 10px;
+        //    color: red;
+        }
+        p{
+            font-size: 18px;
+            margin: 10px;
+            text-align: center;
+        }
+        button{
+            @include button;
+            background: $cyan;
+            color: white;
+            font-weight: 800;
+        }
+    }
+}

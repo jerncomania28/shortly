@@ -1,0 +1,56 @@
+$menu-burger__width: 28px;
+$menu-burger_height: 4px;
+$menu-burger_background: black;
+$menu-burger_radius: 5px;
+$font-size: 24px;
+$cyan: hsl(180, 66%, 49%);
+$dark-violent: hsl(257, 27%, 26%);
+$red: hsl(0, 87%, 67%);
+$gray: hsl(0, 0%, 75%);
+$gray-violent: #ddd;
+$card-text: rgba(204, 204, 204, 0.754);
+$very-dark_blue: hsl(255, 11%, 22%);
+$very-dark_violent: hsl(260, 8%, 14%);
+
+@mixin button {
+    border: none;
+    padding: 1rem;
+    outline: none;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    background: $cyan;
+    margin: 0.5rem;
+
+    a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+    }
+}
+
+@mixin list {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    color: white;
+    p {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .inner {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        li {
+            margin: 10px;
+            color: $gray;
+        }
+    }
+}
